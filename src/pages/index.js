@@ -42,8 +42,8 @@ class BlogIndex extends React.Component {
               <li>{<Link to="/" rel="prev" />}</li>
               <li>
                 {
-                  <Link to="/2/2/" rel="next">
-                    2 →
+                  <Link to="/1/1/" rel="next">
+                    1 →
                   </Link>
                 }
               </li>

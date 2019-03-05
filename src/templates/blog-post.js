@@ -5,7 +5,7 @@ import { Link, graphql } from "gatsby";
 import Layout from "../components/layout";
 import SEO from "../components/seo";
 import { rhythm, scale } from "../utils/typography";
-import logo from "./uniparrot4.png";
+import logo from "./neste_side_Kris_norsk_text.png";
 
 class BlogPostTemplate extends React.Component {
   render() {
@@ -15,6 +15,7 @@ class BlogPostTemplate extends React.Component {
 
     return (
       <Layout location={this.props.location} title={siteTitle}>
+        <div dangerouslySetInnerHTML={{ __html: post.html }} />
         <SEO title={post.frontmatter.title} description={post.excerpt} />
 
         <p
@@ -47,7 +48,7 @@ class BlogPostTemplate extends React.Component {
               <Link to={next.fields.slug} rel="next">
                 <img
                   style={{
-                    width: "133px"
+                    width: "333px"
                   }}
                   src={logo}
                   alt="Geff Logo"
@@ -56,7 +57,7 @@ class BlogPostTemplate extends React.Component {
             )}
           </li>
         </ul>
-        <div dangerouslySetInnerHTML={{ __html: post.html }} />
+
         <hr
           style={{
             marginBottom: rhythm(1)
