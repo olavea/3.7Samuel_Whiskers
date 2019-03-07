@@ -30,7 +30,7 @@ exports.createPages = ({ graphql, actions }) => {
       throw result.errors;
     }
 
-    // Create blog posts pages.
+    // Create children's book pages.
     const posts = result.data.allMarkdownRemark.edges;
 
     posts.forEach((post, index) => {

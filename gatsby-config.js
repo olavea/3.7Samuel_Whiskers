@@ -1,11 +1,12 @@
 module.exports = {
   siteMetadata: {
-    title: ``,
-    author: `Ola Vea`,
-    description: `A starter blog demonstrating what Gatsby can do.`,
-    siteUrl: `https://gatsby-starter-blog-demo.netlify.com/`,
+    title: `Geff the Giraffe`,
+    author: `Andreas fadum Haugstad`,
+    description: `A children's book with adventurous animals. In Norwegian written language.`,
+    developer: `Ola Vea`,
+    siteUrl: `https://olavea.carrd.co/`,
     social: {
-      twitter: `kylemathews`
+      twitter: `olaholstvea`
     }
   },
   plugins: [
