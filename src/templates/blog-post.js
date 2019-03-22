@@ -31,6 +31,7 @@ class BlogPostTemplate extends React.Component {
   state = {
     coloringPages: {}
   };
+
   addColoringPages = iColoredThis => {
     // I. take a copy of existing coloringPages
     const coloringPages = { ...this.state.coloringPages };
