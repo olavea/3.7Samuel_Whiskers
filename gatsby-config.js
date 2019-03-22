@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: `Geff the Giraffe`,
-    author: `Andreas fadum Haugstad`,
-    description: `A children's book with adventurous animals. In Norwegian written language.`,
+    title: `Samuel Whiskers`,
+    author: `Beatrix Potter`,
+    description: `A children's book with adventurous animals.`,
     developer: `Ola Vea`,
     siteUrl: `https://olavea.carrd.co/`,
     social: {
@@ -31,7 +31,7 @@ module.exports = {
           {
             resolve: `gatsby-remark-images`,
             options: {
-              maxWidth: 590
+              maxWidth: 1224
             }
           },
           {
@@ -48,6 +48,7 @@ module.exports = {
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
+    `gatsby-plugin-netlify-cms`,
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
@@ -69,6 +70,7 @@ module.exports = {
     },
     `gatsby-plugin-offline`,
     `gatsby-plugin-react-helmet`,
+    `gatsby-plugin-styled-components`,
     {
       resolve: `gatsby-plugin-typography`,
       options: {
