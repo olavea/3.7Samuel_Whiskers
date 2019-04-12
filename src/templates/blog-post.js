@@ -4,6 +4,9 @@ import Layout from "../components/layout";
 import SEO from "../components/seo";
 import { rhythm } from "../utils/typography";
 
+import Inventory from "../components/Inventory";
+import fishes from "../sample-fishes";
+import Fish from "../components/Fish";
 import AddLilliansColoringPage from "../components/AddKidsColoringPage";
 import buttonBirdyTop from "./Bee_hummingbird_no.4.png";
 import buttonBirdyBottom from "./Bee_hummingbird_no.png";
@@ -29,16 +32,20 @@ const BeeHummingBirdWrapper = styled.div`
 
 class BlogPostTemplate extends React.Component {
   state = {
-    coloringPages: {}
+    fargelagteArk: {}
   };
 
   addColoringPages = iColoredThis => {
-    // I. take a copy of existing coloringPages
-    const coloringPages = { ...this.state.coloringPages };
-    // II. add our new coloringPages to that coloringPages variables
-    coloringPages[`iColoredThis${Date.now()}`] = coloringPages;
+    // I. take a copy of coloringPages existing coloringPages
+    const fargelagteArk = { ...this.state.fargelagteArk };
+    // II. add our new coloringPages to that coloringPages variable
+    fargelagteArk[`iColoredThis${Date.now()}`] = fargelagteArk;
     // III. set the new coloringPages object to state
-    this.setState({ coloringPages });
+    this.setState({ fargelagteArk });
+  };
+
+  loadSampleFishes = () => {
+    this.setState({ fargelagteArk: fishes });
   };
 
   componentDidMount() {
@@ -64,7 +71,7 @@ class BlogPostTemplate extends React.Component {
       <Layout location={this.props.location} title={siteTitle}>
         <BeeHummingBirdWrapper>
           <SEO title={post.frontmatter.title} description={post.excerpt} />
-          <AddLilliansColoringPage addColoringPages={this.addColoringPages} />
+
           <ul
             style={{
               display: `flex`,
@@ -99,6 +106,16 @@ class BlogPostTemplate extends React.Component {
             </li>
           </ul>
           <div dangerouslySetInnerHTML={{ __html: post.html }} />
+          <AddLilliansColoringPage addColoringPages={this.addColoringPages} />
+          <Inventory
+            addColoringPages={this.addColoringPages}
+            loadSampleFishes={this.loadSampleFishes}
+          />
+          <ul className="fishes">
+            {Object.keys(this.state.fargelagteArk).map(key => (
+              <Fish key={key} />
+            ))}
+          </ul>
 
           <ul
             style={{
